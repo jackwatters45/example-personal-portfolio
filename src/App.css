@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+
+footer {
+  background: red;
+}
+
+main {
+  background: blue;
+}
+
+header {
+  background: green;
+}
