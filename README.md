@@ -2,9 +2,10 @@
 
 todo
 
-- Get Image (images) of me
-- Gather Icons
 - color scheme
-- some basic styles
-- plan of attack
+- some basic styles (also clean up css)
 - start with layout
+- top to bottom
+## todo
+
+- add light mode

@@ -1,20 +1,14 @@
-import './App.css';
-import Blog from './components/Blog';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Projects from './components/Projects';
-import TechStack from './components/TechStack';
+import AlbumCover from './components/Intro';
+import Blog from './components/later/Blog';
+import Footer from './components/later/Footer';
+import Projects from './components/Projects/Projects';
+import TechStack from './components/later/TechStack';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <TechStack />
-        <Projects />
-        <Blog />
-      </main>
-      <Footer />
+      <AlbumCover />
+      <Projects />
     </div>
   );
 }

@@ -1,0 +1,49 @@
+@import 'variables';
+
+.header {
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .icons {
+    display: flex;
+    gap: 0.25em;
+    margin-top: 0.25em;
+  }
+
+  // TODO gonna need media queries for this
+  .about {
+    display: flex;
+    max-width: 1200px;
+    margin: calc(8vw);
+    border: 1px solid $empty-font-color;
+    border-radius: 3px;
+    align-self: center;
+
+    .textContainer {
+      padding: 1em 2em 1em 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    // TODO make image height responsive
+    .selfImage {
+      width: 200px;
+      height: 100%;
+      border-radius: 0 3px 3px 0;
+
+      object-fit: cover;
+    }
+  }
+}

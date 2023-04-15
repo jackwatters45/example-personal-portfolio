@@ -1,0 +1,47 @@
+@import './_variables.scss';
+
+.projects {
+  margin: 4vh;
+
+  h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 2em 0;
+    gap: 2em;
+
+    .card {
+      border-radius: 3px;
+      border: solid 1px $empty-font-color;
+      background: $card-background-color;
+      box-shadow: $shadow;
+
+      img {
+        width: 100%;
+        max-height: 300px;
+        border-radius: 3px;
+        object-fit: cover;
+        border-bottom: solid 1px $empty-font-color;
+      }
+
+      .content {
+        padding: 0.25em 1em;
+      }
+
+      .firstRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .links {
+          display: flex;
+          gap: 0.5em;
+        }
+      }
+    }
+  }
+}

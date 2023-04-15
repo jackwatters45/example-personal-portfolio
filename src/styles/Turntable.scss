@@ -1,0 +1,54 @@
+
+.vinyl {
+  margin-top: 10vh;
+  width: 60vh;
+
+  animation: 4s rotate 1s ease-in, 4s rotate 5s 14 linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tonearm {
+  position: absolute;
+  width: 35vh;
+  left: 30vh;
+  top: 7vh;
+
+  transform-origin: top right;
+  animation: 1s tonearmToVinyl ease-in-out forwards,
+    60s playSong linear 1s forwards, 2s returnToStart ease-in-out 62s forwards;
+}
+
+@keyframes tonearmToVinyl {
+  0% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes playSong {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes returnToStart {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(-40deg);
+  }
+}
