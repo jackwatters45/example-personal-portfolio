@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.contactSection {
+  margin: 2em 1em 0;
+  padding: 3vh 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-top: 1px solid $empty-font-color;
+
+  h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 3px;
+
+    .secondRow {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .address,
+      .phone,
+      .email {
+        display: flex;
+        gap: 0.5em;
+      }
+
+      .icons {
+        display: flex;
+        gap: 0.25em;
+        margin-top: 0.25em;
+      }
+    }
+  }
+}
