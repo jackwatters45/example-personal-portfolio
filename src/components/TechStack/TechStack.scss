@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.techStack {
+  margin: 0 4vh;
+
+  h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+    gap: 1em;
+    padding: 1em 0;
+
+    .card {
+      border: solid 1px $empty-font-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        padding: .5em;
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-bottom: solid 1px $empty-font-color;
+      }
+    }
+  }
+}

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Octokit } from '@octokit/core';
 import toTitleCase from '../../utils/toTitleCase';
 import Card from './Card';
-import '../../styles/Projects.scss';
-
-type Props = {};
+import './Projects.scss';
 
 export interface RepoData {
   id: string;
@@ -16,7 +14,7 @@ export interface RepoData {
   url: string;
 }
 
-const Projects = (props: Props) => {
+const Projects = () => {
   const [reposData, setReposData] = useState<RepoData[]>([]);
 
   interface Repo {
