@@ -1,18 +1,16 @@
 import React from 'react';
-import '../styles/Intro.scss';
+import './Intro.scss';
 import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin } from '@mdi/js';
-import selfImg from '../assets/selfImage.jpg';
-import selfImgWebp from '../assets/selfImage.webp';
 
-type Props = {};
+type Props = { toggleTheme: () => void };
 
-const AlbumCover = (props: Props) => {
+const AlbumCover = ({ toggleTheme }: Props) => {
   return (
     <div className="header">
       <nav>
         <h1>JACK WATTERS</h1>
-        <div>theme switch</div>
+        <div onClick={toggleTheme}>theme switch</div>
       </nav>
 
       {/* Animation here */}
@@ -52,9 +50,18 @@ const AlbumCover = (props: Props) => {
         </div>
 
         <picture>
-          <source srcSet={selfImgWebp} type="image/webp" />
-          <source srcSet={selfImg} type="image/jpeg" />
-          <img className="selfImage" src={selfImg} alt="Jack Watters" />
+          <source
+            srcSet="https://res.cloudinary.com/drheg5d7j/image/upload/v1681623142/personal%20portfolio/selfImage_a0crd2.webp"
+            type="image/webp"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/drheg5d7j/image/upload/v1681623146/personal%20portfolio/selfImage_mdgwe4.jpg"
+            type="image/jpeg"
+          />
+          <img
+            src="https://res.cloudinary.com/drheg5d7j/image/upload/v1681623146/personal%20portfolio/selfImage_mdgwe4.jpg"
+            alt="Jack Watters"
+          />
         </picture>
       </div>
     </div>

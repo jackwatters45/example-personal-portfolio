@@ -1,8 +1,9 @@
 @import '../../styles/variables';
 
 .techStack {
-  margin: 0 4vh;
-
+  margin: 0 6vw;
+  max-width: 1200px;
+  align-self: center;
   h2 {
     font-size: 1.5em;
     margin: 0;
@@ -12,6 +13,7 @@
     display: flex;
     gap: 1em;
     padding: 1em 0;
+    overflow: auto;
 
     .card {
       border: solid 1px $empty-font-color;
@@ -20,12 +22,18 @@
       align-items: center;
 
       img {
-        padding: .5em;
+        padding: 0.5em;
         width: 100px;
         height: 100px;
         object-fit: contain;
         border-bottom: solid 1px $empty-font-color;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .techStack {
+    align-self: inherit;
   }
 }

@@ -1,5 +1,4 @@
-
-@import "./styles/variables";
+@import './variables';
 
 * {
   box-sizing: border-box;
@@ -14,9 +13,8 @@
   line-height: 1.5;
 
   color-scheme: light dark;
-  color: $main-font-color;
-  background-color: $main-background-color;
 
+  user-select: none;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -45,9 +43,22 @@ a {
   color: inherit;
 }
 
+.dark {
+  color: $main-font-color;
+  background-color: $main-background-color;
+}
+
+.light {
+  color: $light-theme-font;
+  background-color: $light-theme-background;
+}
+
 .App {
   min-width: 320px;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8vw;
 }

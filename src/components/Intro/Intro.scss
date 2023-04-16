@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../../styles/variables';
 
 .header {
   margin: 0 1em;
@@ -24,8 +24,8 @@
   // TODO gonna need media queries for this
   .about {
     display: flex;
-    max-width: 1200px;
-    margin: calc(8vw);
+    max-width: 1000px;
+    margin: 12vh 8vw 0;
     border: 1px solid $empty-font-color;
     border-radius: 3px;
     align-self: center;
@@ -37,13 +37,21 @@
       gap: 1em;
     }
 
-    // TODO make image height responsive
-    .selfImage {
+    img {
       width: 200px;
       height: 100%;
       border-radius: 0 3px 3px 0;
-
       object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    .about {
+      img {
+        display: none;
+      }
     }
   }
 }
