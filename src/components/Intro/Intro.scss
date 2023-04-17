@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 .header {
-  margin: 0 1em;
+  margin: 0 min(1em, 2vw);
   display: flex;
   flex-direction: column;
 
@@ -22,12 +22,12 @@
   .about {
     display: flex;
     max-width: 1000px;
-    margin: 12vh 8vw 0;
+    margin: 8vw 4vw 0;
     border-radius: 3px;
     align-self: center;
 
     .textContainer {
-      padding: 1em 2em 1em 1em;
+      padding: 1em ;
       display: flex;
       flex-direction: column;
       gap: 1em;

@@ -20,21 +20,16 @@
 
     .secondRow {
       display: flex;
-      gap: 1em;
       align-items: center;
       flex-wrap: wrap;
+      gap: 0.5em;
 
       .address,
       .phone,
       .email {
+        margin-right: 0.5em;
         display: flex;
         gap: 0.5em;
-      }
-
-      .icons {
-        display: flex;
-        gap: 0.25em;
-        margin-top: 0.25em;
       }
     }
   }
