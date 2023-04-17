@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+
+// Change these 3
+$slider-height: 25px;
+$dark-background: $background-secondary;
+$light-background: $text-primary;
+
+$slider-width: $slider-height * 2;
+$slider-before-top: 0.13 * $slider-height;
+$slider-before-left: 0.16 * $slider-height;
+$slider-before-width: 0.75 * $slider-height;
+$slider-before-height: $slider-before-width;
+$slider-before-box-shadow: inset (0.28 * $slider-height)
+  (-0.04 * $slider-height) 0 0 $light-background;
+$transform-translate-x: translateX(0.95 * $slider-height);
+
+.switch {
+  height: $slider-height;
+  width: $slider-width;
+  background-color: $dark-background;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+
+  input:checked ~ .slider {
+    background-color: $light-background;
+  }
+
+  .slider::before {
+    content: '';
+    position: absolute;
+    top: $slider-before-top;
+    left: $slider-before-left;
+    width: $slider-before-width;
+    height: $slider-before-height;
+    border-radius: 50%;
+    box-shadow: $slider-before-box-shadow;
+    background-color: $dark-background;
+    transition: 0.3s;
+  }
+
+  input:checked ~ .slider::before {
+    transform: $transform-translate-x;
+    background-color: $dark-background;
+    box-shadow: none;
+  }
+}

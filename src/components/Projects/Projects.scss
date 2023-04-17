@@ -16,8 +16,6 @@
 
     .card {
       border-radius: 3px;
-      border: solid 1px $empty-font-color;
-      background: $card-background-color;
       box-shadow: $shadow;
 
       img {
@@ -25,11 +23,10 @@
         max-height: 300px;
         border-radius: 3px;
         object-fit: cover;
-        border-bottom: solid 1px $empty-font-color;
       }
 
       .content {
-        padding: 0.25em 1em .5em;
+        padding: 0.25em 1em 0.5em;
         display: flex;
         flex-direction: column;
         gap: 0.5em;
@@ -45,6 +42,33 @@
           gap: 0.5em;
         }
       }
+    }
+  }
+}
+
+.dark {
+  .card {
+    border: 1px solid $border-color;
+    background: $background-secondary;
+    box-shadow: $shadow;
+
+    img {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+.light {
+  .card {
+    background: $background-secondary-light;
+    box-shadow: $shadow;
+
+    img {
+      border-bottom: 1px solid $border-color-light;
+    }
+
+    p {
+      color: $text-secondary-light;
     }
   }
 }

@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '../../styles/variables.scss';
 
 .techStack {
   margin: 0 6vw;
@@ -16,19 +16,33 @@
     overflow: auto;
 
     .card {
-      border: solid 1px $empty-font-color;
       display: flex;
       flex-direction: column;
       align-items: center;
+      border-radius: 3px;
 
       img {
         padding: 0.5em;
         width: 100px;
         height: 100px;
         object-fit: contain;
-        border-bottom: solid 1px $empty-font-color;
       }
     }
+  }
+}
+
+.dark {
+  .card {
+    background: $background-secondary;
+    box-shadow: $shadow;
+    border: 1px solid $border-color;
+  }
+}
+
+.light {
+  .card {
+    background: $background-secondary-light;
+    box-shadow: $shadow;
   }
 }
 

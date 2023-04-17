@@ -6,16 +6,14 @@ import { useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-  const toggleTheme = () => {
-    if (theme === 'dark') setTheme('light');
-    else setTheme('dark');
-  };
-  
+  const toggleTheme = () =>
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+
   return (
     <div className={`App ${theme}`}>
-      <Intro toggleTheme={toggleTheme} />
+      <Intro toggleTheme={toggleTheme}  />
+      <Projects  />
       <TechStack />
-      <Projects />
       <Contact />
     </div>
   );

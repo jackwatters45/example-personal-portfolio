@@ -14,6 +14,8 @@ export interface RepoData {
   url: string;
 }
 
+
+
 const Projects = () => {
   const [reposData, setReposData] = useState<RepoData[]>([]);
 
@@ -64,7 +66,7 @@ const Projects = () => {
       <h2>PROJECTS</h2>
       <div className="cards">
         {reposData.map((repo: RepoData) => {
-          return <Card key={repo.name} repo={repo} />;
+          return <Card key={repo.name} repo={repo}  />;
         })}
       </div>
     </section>

@@ -1,14 +1,14 @@
-$main-background-color: rgb(25, 25, 25);
-$card-background-color: rgb(47, 47, 47);
-$secondary-background-color: rgb(37, 37, 37);
-$section-background-color: rgb(28, 28, 28);
-$card-hover-background-color: rgb(55, 55, 55);
-$main-font-color: rgba(255, 255, 255, 0.81);
-$secondary-font-color: rgb(127, 127, 127);
-$empty-font-color: rgba(255, 255, 255, 0.282);
-$border-color: rgba(255, 255, 255, 0.13);
+$text-primary: rgba(255, 255, 255, 0.81);
+$text-secondary: rgb(127, 127, 127);
+$background-primary: rgb(25, 25, 25);
+$background-secondary: rgb(47, 47, 47);
+$border-color: rgba(255, 255, 255, 0.282);
 
-$light-theme-font: #121212;
-$light-theme-background: #fff;
+$text-primary-light: #121212;
+$text-secondary-light: rgb(47, 47, 47);
+$background-primary-light: #ffff;
+$background-secondary-light: #f6f5f4;
+$border-color-light: rgb(180, 180, 180);
 
-$shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
+$shadow: rgb(15 15 15 / 15%) 0px 0px 0px 2px, rgb(15 15 15 / 15%) 0px 3px 6px;
+

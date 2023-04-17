@@ -1,5 +1,4 @@
-@import '../../styles/variables';
-
+@import '../../styles/variables.scss';
 .header {
   margin: 0 1em;
   display: flex;
@@ -9,10 +8,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  h1 {
-    font-size: 2em;
+    h1 {
+      font-size: 2em;
+    }
   }
 
   .icons {
@@ -21,12 +19,10 @@
     margin-top: 0.25em;
   }
 
-  // TODO gonna need media queries for this
   .about {
     display: flex;
     max-width: 1000px;
     margin: 12vh 8vw 0;
-    border: 1px solid $empty-font-color;
     border-radius: 3px;
     align-self: center;
 
@@ -43,6 +39,20 @@
       border-radius: 0 3px 3px 0;
       object-fit: cover;
     }
+  }
+}
+
+.dark {
+  .about {
+    background: $background-secondary;
+    box-shadow: $shadow;
+  }
+}
+
+.light {
+  .about {
+    background: $background-secondary-light;
+    box-shadow: $shadow;
   }
 }
 

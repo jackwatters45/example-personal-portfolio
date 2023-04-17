@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Intro.scss';
 import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin } from '@mdi/js';
+import ToggleButton from './ToggleButton/ToggleButton';
+import { ThemeContext } from 'styled-components';
 
 type Props = { toggleTheme: () => void };
 
 const AlbumCover = ({ toggleTheme }: Props) => {
   return (
-    <div className="header">
+    <div className={`header `}>
       <nav>
         <h1>JACK WATTERS</h1>
-        <div onClick={toggleTheme}>theme switch</div>
+        <ToggleButton toggleTheme={toggleTheme} />
       </nav>
 
       {/* Animation here */}
