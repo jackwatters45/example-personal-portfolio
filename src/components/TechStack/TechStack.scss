@@ -1,9 +1,32 @@
 @import '../../styles/variables.scss';
 
+@mixin dark-gradient {
+  background: linear-gradient(
+    to right,
+    $background-primary 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@mixin light-gradient {
+  background: linear-gradient(
+    to right,
+    $background-primary-light 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+$card-height: 128px;
+$card-width: 100px;
+$animation-duration: 28s;
+$number-of-cards: 14;
+$number-of-cards-in-slider: $number-of-cards * 2;
+
 .techStack {
   margin: 0 6vw;
   max-width: 1200px;
   align-self: center;
+
   h2 {
     font-size: 1.5em;
     margin: 0;
@@ -11,35 +34,83 @@
 
   .content {
     display: flex;
-    gap: 1em;
+    position: relative;
     padding: 1em 0;
-    overflow: auto;
+    overflow: hidden;
 
-    .card {
+    &::before,
+    &::after {
+      content: '';
+      margin: 1em 0;
+      height: $card-height;
+      position: absolute;
+      width: 20vw;
+      z-index: 2;
+      top: 0;
+    }
+
+    &::after {
+      right: 0;
+      transform: rotateZ(180deg);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    .contentSlider {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 3px;
+      width: calc(#{$card-width} * #{$number-of-cards-in-slider});
 
-      img {
-        padding: 0.5em;
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
+      animation: scroll $animation-duration linear infinite;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 3px;
+        padding-bottom: 0.25em;
+
+        img {
+          padding: 0.5em 0.5em 0;
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+        }
       }
     }
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-#{$card-width} * #{$number-of-cards}));
+  }
+}
+
 .dark {
+  .content {
+    &::before,
+    &::after {
+      @include dark-gradient;
+    }
+  }
   .card {
     background: $background-secondary;
     box-shadow: $shadow;
-    border: 1px solid $border-color;
   }
 }
 
 .light {
+  .content {
+    &::before,
+    &::after {
+      @include light-gradient;
+    }
+  }
   .card {
     background: $background-secondary-light;
     box-shadow: $shadow;

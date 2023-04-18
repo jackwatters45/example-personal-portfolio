@@ -12,3 +12,6 @@
 
 - preview images -> video
   - if not just make sure they look good when big
+  - change to just add to actual file
+
+- change description of projects

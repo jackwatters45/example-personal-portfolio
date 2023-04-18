@@ -47,28 +47,32 @@
 }
 
 .dark {
-  .card {
-    border: 1px solid $border-color;
-    background: $background-secondary;
-    box-shadow: $shadow;
+  .projects {
+    .card {
+      border: 1px solid $border-color;
+      background: $background-secondary;
+      box-shadow: $shadow;
 
-    img {
-      border-bottom: 1px solid $border-color;
+      img {
+        border-bottom: 1px solid $border-color;
+      }
     }
   }
 }
 
 .light {
-  .card {
-    background: $background-secondary-light;
-    box-shadow: $shadow;
+  .projects {
+    .card {
+      background: $background-secondary-light;
+      box-shadow: $shadow;
 
-    img {
-      border-bottom: 1px solid $border-color-light;
-    }
+      img {
+        border-bottom: 1px solid $border-color-light;
+      }
 
-    p {
-      color: $text-secondary-light;
+      p {
+        color: $text-secondary-light;
+      }
     }
   }
 }
