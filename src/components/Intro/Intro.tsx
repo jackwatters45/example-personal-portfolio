@@ -7,19 +7,17 @@ import { ThemeContext } from 'styled-components';
 
 type Props = { toggleTheme: () => void };
 
-const AlbumCover = ({ toggleTheme }: Props) => {
+const Intro = ({ toggleTheme }: Props) => {
   return (
-    <div className={`header `}>
+    <div className="header">
       <nav>
         <h1>JACK WATTERS</h1>
         <ToggleButton toggleTheme={toggleTheme} />
       </nav>
-
-      {/* Animation here */}
-      {/* Need to make more interesting */}
       <div className="about">
         <div className="textContainer">
           <h3>WEB DEVELOPER & CREATOR</h3>
+          <span />
           <p>
             I am Jack Watters (he/him). I enjoy listening to country western
             music while browsing the web for new hi-fi equipment, following my
@@ -70,4 +68,4 @@ const AlbumCover = ({ toggleTheme }: Props) => {
   );
 };
 
-export default AlbumCover;
+export default Intro;

@@ -2,6 +2,8 @@
 
 .projects {
   margin: 0 6vw;
+  align-self: center;
+  max-width: 1200px;
 
   h2 {
     font-size: 1.5em;
@@ -10,7 +12,7 @@
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax( 284px, 1fr));
     margin: 2em 0 0;
     gap: 2em;
 
@@ -73,6 +75,15 @@
       p {
         color: $text-secondary-light;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .projects{
+    .cards {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

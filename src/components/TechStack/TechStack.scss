@@ -35,7 +35,7 @@ $number-of-cards-in-slider: $number-of-cards * 2;
   .content {
     display: flex;
     position: relative;
-    padding: 1em 0;
+    padding: 1em 0 4px;
     overflow: hidden;
 
     &::before,
@@ -50,7 +50,7 @@ $number-of-cards-in-slider: $number-of-cards * 2;
     }
 
     &::after {
-      right: 0;
+      right: -1px;
       transform: rotateZ(180deg);
     }
 
