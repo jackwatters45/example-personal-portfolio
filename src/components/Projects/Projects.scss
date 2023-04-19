@@ -12,7 +12,7 @@
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax( 284px, 1fr));
+    grid-template-columns: 1fr 1fr;
     margin: 2em 0 0;
     gap: 2em;
 
@@ -42,7 +42,7 @@
         .links {
           display: flex;
           gap: 0.5em;
-        
+
           img {
             width: 18px;
           }
@@ -62,6 +62,12 @@
       .preview {
         border-bottom: 1px solid $border-color;
       }
+
+      .links {
+        img {
+          filter: $icon-filter;
+        }
+      }
     }
   }
 }
@@ -79,12 +85,18 @@
       p {
         color: $text-secondary-light;
       }
+
+      .links {
+        img {
+          filter: $icon-filter-light;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 720px) {
-  .projects{
+  .projects {
     .cards {
       display: flex;
       flex-direction: column;

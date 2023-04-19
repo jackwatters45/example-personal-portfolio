@@ -5,24 +5,18 @@ import openInNew from '../../assets/icons/open-in-new.svg';
 import { RepoData } from './Projects';
 
 interface CardProps {
-  repo: RepoData;
+  name: string;
+  createdTime: Date;
+  url: string;
+  repoUrl: string;
+  desc: string;
+  img: string;
 }
 
-const Card = ({ repo }: CardProps) => {
-  const { name, createdTime, url, repoUrl, desc } = repo;
-
-  const [previewImg, setPreviewImg] = React.useState<string>('');
-  useEffect(() => {
-    const getLinkPreviewFunc = async () => {
-      const previewData = await getLinkPreview(url);
-      if ('images' in previewData) setPreviewImg(previewData.images[0]);
-    };
-    getLinkPreviewFunc();
-  }, [url]);
-
+const Card = ({ name, createdTime, url, repoUrl, desc, img }: CardProps) => {
   return (
     <div className="card">
-      <img src={previewImg} className="preview" alt="Placeholder image" />
+      <img src={img} className="preview" alt="Placeholder image" />
       <div className="content">
         <div className="firstRow">
           <h3 className="card-name">{name}</h3>
@@ -36,8 +30,7 @@ const Card = ({ repo }: CardProps) => {
           </div>
         </div>
         <p className="card-date">
-          <strong>Created:</strong>
-          {createdTime.toLocaleDateString()}
+          <strong>Created:</strong> {createdTime.toLocaleDateString()}
         </p>
         <p>{desc}</p>
       </div>

@@ -2,7 +2,7 @@ import Intro from './components/Intro/Intro';
 import Projects from './components/Projects/Projects';
 import TechStack from './components/TechStack/TechStack';
 import Contact from './components/Contact/Contact';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -11,8 +11,8 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      <Intro toggleTheme={toggleTheme}  />
-      <Projects  />
+      <Intro toggleTheme={toggleTheme} />
+      <Projects />
       <TechStack />
       <Contact />
     </div>

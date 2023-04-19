@@ -39,33 +39,26 @@ const Projects = () => {
     return { id, name, desc, lastUpdate, repoUrl, createdTime, url };
   };
 
-  useEffect(() => {
-    const octokit = new Octokit();
-    try {
-      const getRepos = async () => {
-        const reposResponse = await octokit.request('GET /users/{user}/repos', {
-          user: 'jackwatters45',
-        });
-
-        const reposToDisplay = reposResponse.data.filter(
-          (repo: Repo) => !!repo.topics.includes('portfolio'),
-        );
-
-        setReposData(reposToDisplay.map((repo: Repo) => getRepoData(repo)));
-      };
-      if (!reposData.length) getRepos();
-    } catch (e) {
-      console.log(e);
-    }
-  }, []);
-
   return (
     <section className="projects">
       <h2>PROJECTS</h2>
       <div className="cards">
-        {reposData.map((repo: RepoData) => {
-          return <Card key={repo.name} repo={repo} />;
-        })}
+        <Card
+          name="Todo List/Notion Clone"
+          createdTime={new Date('2/14/23')}
+          url="https://jackwatters.dev/todo-list-react"
+          repoUrl="https://github.com/jackwatters45/todo-list-react"
+          desc="A todo list based on how I use Notion.io for day to day use. Created Using React.js and Firebase."
+          img="https://res.cloudinary.com/drheg5d7j/image/upload/v1681594555/personal%20portfolio/todo-preview_1_ms2vf7.jpg"
+        />
+        <Card
+          name="Wheres Waldo App"
+          createdTime={new Date('2/16/23')}
+          url="https://jackwatters.dev/wheres-waldo-app"
+          repoUrl="https://github.com/jackwatters45/wheres-waldo-app"
+          desc="Users attempt to locate characters in an image as fast as possible.  Uses Firebase Firestore and Authentication."
+          img="https://res.cloudinary.com/drheg5d7j/image/upload/v1681594946/personal%20portfolio/wheres-waldo-app_oprcj6.jpg"
+        />
       </div>
     </section>
   );
