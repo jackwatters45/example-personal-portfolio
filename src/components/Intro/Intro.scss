@@ -15,12 +15,6 @@
     }
   }
 
-  .icons {
-    display: flex;
-    gap: 0.25em;
-    margin-top: 0.25em;
-  }
-
   .about {
     display: flex;
     max-width: 1000px;
@@ -29,28 +23,24 @@
     align-self: center;
 
     h3 {
-      // display: none;
       margin: 0;
     }
-
-    span {
-      display: none;
-    }
-    // span::after {
-    //   content: 'WEB DEVELOPER & CREATOR';
-    //   font-size: 1.2em;
-    //   font-weight: bold;
-    // }
-
-    // span:hover::after {
-    //   animation: spin .5s linear 1;
-    // }
 
     .textContainer {
       padding: 1em;
       display: flex;
       flex-direction: column;
       gap: 1em;
+    }
+
+    .icons {
+      display: flex;
+      gap: 0.5em;
+      margin-top: 0.25em;
+    }
+
+    .icon {
+      width: 24px;
     }
 
     img {
@@ -63,16 +53,28 @@
 }
 
 .dark {
-  .about {
-    background: $background-secondary;
-    box-shadow: $shadow;
+  .header {
+    .icon {
+      filter: $icon-filter;
+    }
+
+    .about {
+      background: $background-secondary;
+      box-shadow: $shadow;
+    }
   }
 }
 
 .light {
-  .about {
-    background: $background-secondary-light;
-    box-shadow: $shadow;
+  .header {
+    .about {
+      background: $background-secondary-light;
+      box-shadow: $shadow;
+
+      .icon {
+        filter: $icon-filter-light;
+      }
+    }
   }
 }
 

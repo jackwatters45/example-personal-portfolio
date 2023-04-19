@@ -1,5 +1,3 @@
-import React from 'react';
-
 type Props = { name: string; image: string };
 
 const TechStackCard = ({ name, image }: Props) => {

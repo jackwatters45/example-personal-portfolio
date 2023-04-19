@@ -1,7 +1,9 @@
-import React from 'react';
 import './Contact.scss';
-import Icon from '@mdi/react';
-import { mdiHome, mdiPhone, mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js';
+import home from '../../assets/icons/home.svg';
+import phone from '../../assets/icons/phone.svg';
+import email from '../../assets/icons/email.svg';
+import github from '../../assets/icons/github.svg';
+import linkedin from '../../assets/icons/linkedin.svg';
 
 const Contact = () => {
   return (
@@ -14,22 +16,22 @@ const Contact = () => {
         </p>
         <div className="secondRow">
           <div className="address">
-            <Icon path={mdiHome} size={1} />
+            <img src={home} alt="address" />
             <p>17 Plymouth Ave Mill Valley, CA 94941</p>
           </div>
           <div className="phone">
-            <Icon path={mdiPhone} size={1} />
+            <img src={phone} alt="phone" />
             <p>(954) 494-9167</p>
           </div>
           <div className="email">
-            <Icon path={mdiEmail} size={1} />
+            <img src={email} alt="email" />
             <p>jack.watters@me.com</p>
           </div>
           <a href="https://github.com/jackwatters45">
-            <Icon path={mdiGithub} size={1} />
+            <img src={github} alt="github" />
           </a>
           <a href="https://www.linkedin.com/in/john-watters/">
-            <Icon path={mdiLinkedin} size={1} />
+            <img src={linkedin} alt="github" />
           </a>
         </div>
       </div>

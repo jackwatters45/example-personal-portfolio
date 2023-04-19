@@ -1,19 +1,17 @@
-import React from 'react';
 import './TechStack.scss';
 import TechStackCard from './TechStackCard';
 
 const TechStack = () => {
-  console.log(techStackElements.length);
   return (
     <section className="techStack">
       <h2>TECH STACK</h2>
       <div className="content">
         <div className="contentSlider">
           {techStackElements.map(({ name, image }) => (
-            <TechStackCard name={name} image={image} />
+            <TechStackCard key={name} name={name} image={image} />
           ))}
           {techStackElements.map(({ name, image }) => (
-            <TechStackCard name={name} image={image} />
+            <TechStackCard key={`${name}1`} name={name} image={image} />
           ))}
         </div>
       </div>

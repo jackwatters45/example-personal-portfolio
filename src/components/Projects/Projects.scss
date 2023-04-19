@@ -42,6 +42,10 @@
         .links {
           display: flex;
           gap: 0.5em;
+        
+          img {
+            width: 18px;
+          }
         }
       }
     }
@@ -55,7 +59,7 @@
       background: $background-secondary;
       box-shadow: $shadow;
 
-      img {
+      .preview {
         border-bottom: 1px solid $border-color;
       }
     }
@@ -68,7 +72,7 @@
       background: $background-secondary-light;
       box-shadow: $shadow;
 
-      img {
+      .preview {
         border-bottom: 1px solid $border-color-light;
       }
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Octokit } from '@octokit/core';
+import { useEffect, useState } from 'react';
+import { Octokit } from 'octokit';
 import toTitleCase from '../../utils/toTitleCase';
 import Card from './Card';
 import './Projects.scss';
@@ -13,8 +13,6 @@ export interface RepoData {
   createdTime: Date;
   url: string;
 }
-
-
 
 const Projects = () => {
   const [reposData, setReposData] = useState<RepoData[]>([]);
@@ -66,7 +64,7 @@ const Projects = () => {
       <h2>PROJECTS</h2>
       <div className="cards">
         {reposData.map((repo: RepoData) => {
-          return <Card key={repo.name} repo={repo}  />;
+          return <Card key={repo.name} repo={repo} />;
         })}
       </div>
     </section>

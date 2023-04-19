@@ -17,6 +17,10 @@
     gap: 0.5em;
     border-radius: 3px;
 
+    img {
+      width: 20px;
+    }
+
     .secondRow {
       display: flex;
       align-items: center;
@@ -38,6 +42,10 @@
   .contactSection {
     border-top: 1px solid $border-color;
     background: $background-secondary;
+
+    img {
+      filter: $icon-filter;
+    }
   }
 }
 
@@ -45,5 +53,9 @@
   .contactSection {
     border-top: 1px solid $border-color-light;
     background: $background-secondary-light;
+
+    img {
+      filter: $icon-filter-light;
+    }
   }
 }

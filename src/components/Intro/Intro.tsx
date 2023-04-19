@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
 import './Intro.scss';
-import Icon from '@mdi/react';
-import { mdiGithub, mdiLinkedin } from '@mdi/js';
+import github from '../../assets/icons/github.svg';
+import linkedin from '../../assets/icons/linkedin.svg';
 import ToggleButton from './ToggleButton/ToggleButton';
-import { ThemeContext } from 'styled-components';
 
 type Props = { toggleTheme: () => void };
 
@@ -17,7 +15,6 @@ const Intro = ({ toggleTheme }: Props) => {
       <div className="about">
         <div className="textContainer">
           <h3>WEB DEVELOPER & CREATOR</h3>
-          <span />
           <p>
             I am Jack Watters (he/him). I enjoy listening to country western
             music while browsing the web for new hi-fi equipment, following my
@@ -34,17 +31,16 @@ const Intro = ({ toggleTheme }: Props) => {
             Javascript curriculum with my eyes set on landing my first job as a
             full-stack SWE.
           </p>
-          {/* could be more my voice - got from chatGpt */}
           <p>
             Explore my portfolio to see my web development skills in action, and
             get in touch to discuss potential collaborations or projects!
           </p>
           <div className="icons">
             <a href="https://github.com/jackwatters45">
-              <Icon path={mdiGithub} size={1} />
+              <img className="icon" src={github} alt="github" />
             </a>
             <a href="https://www.linkedin.com/in/john-watters/">
-              <Icon path={mdiLinkedin} size={1} />
+              <img className="icon" src={linkedin} alt="linkedin" />
             </a>
           </div>
         </div>
