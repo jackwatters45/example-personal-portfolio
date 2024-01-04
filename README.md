@@ -17,6 +17,8 @@ It is not up to date and was primarily an introduction to react / some more inte
 ```zsh
 git clone https://github.com/jackwatters45/example-personal-portfolio.git
 
+npm install
+
 npm run dev
 ```
 
